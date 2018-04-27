@@ -1,0 +1,1 @@
+gs -dSAFER -dRenderIntent=3 -dBATCH -dNOPAUSE -dNOCACHE -sDEVICE=pdfwrite -sOutputFile=HOPE.pdf ~/output.pdf
