@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="PCFutures">
+ <description>PCFutures PHP Standard Ruleset</description>
+ <rule ref="PEAR">
+  <exclude name="PEAR.Commenting.FunctionComment.MissingParamComment"/>
+ </rule>
+ <rule ref="Generic.Files.LineLength">
+  <properties>
+   <property name="lineLimit" value="100"/>
+  </properties>
+ </rule>
+</ruleset>
