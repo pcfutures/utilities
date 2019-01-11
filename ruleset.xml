@@ -7,6 +7,9 @@
  <rule ref="PEAR">
   <exclude name="PEAR.Commenting.ClassComment.Missing"/>
  </rule>
+ <rule ref="PEAR">
+  <exclude name="PEAR.Commenting.FileComment.Missing"/>
+ </rule>
  <rule ref="Generic.Files.LineLength">
   <properties>
    <property name="lineLimit" value="100"/>
