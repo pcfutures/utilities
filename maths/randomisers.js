@@ -1,4 +1,13 @@
-export const randomInt = (min, max) => Math.floor((Math.random() * ((max - min) + 1)) + min);
+/**
+ * Generate a random integer.
+ *
+ * @param {Number} min The minimum number possible.
+ * @param {Number} max The maximum number possible.
+ *
+ * @return {Number} The random number.
+ */
+export const randomInt = (min = 0, max = 5) =>
+    Math.floor(Math.random() * (max - min + 1) + min);
 
 export const randomString = (length = 20) => {
     let text = '';
