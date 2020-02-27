@@ -6,7 +6,7 @@ export const ucFirst = str => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
 /**
  * Deeply clones an object.
  *
- * @param {Object} object - The object to clone.
+ * @param {Object} object The object to clone.
  *
  * @return {Object}
  */
@@ -31,8 +31,8 @@ const cloneDeep = (object) => {
  *
  * @note To dive into multi-dimentional objects, supply a key with dot syntax.
  *
- * @param {Object} obj - The object to edit
- * @param {Object} mixins - [{ key, value }]
+ * @param {Object} obj The object to edit
+ * @param {Object} mixins [{ key, value }]
  *
  * @return {Object}
  *
@@ -67,8 +67,8 @@ export const editObject = (obj, mixins) => {
 /**
  * Throttles a function call.
  *
- * @param {Function} func - The function
- * @param {Number} limit - The time before the function can be called again
+ * @param {Function} func The function
+ * @param {Number} limit The time before the function can be called again
  *
  * Usage: throttle(() => console.log('hi'), 1000)
  */
@@ -87,3 +87,15 @@ export const throttle = (func, limit = 250) => {
         }
     };
 };
+
+/**
+ * Converts a hexadecimal value to an RGB array.
+ *
+ * @param {String} hex The hexadecimal string.
+ *
+ * @return {Array<Number>}
+ */
+export const hexToRGB = hex =>
+    (hex.charAt(0) === '#' ? hex.substr(1) : hex)
+        .match(/.{1,2}/g)
+        .map(h => parseInt(h, 16));
