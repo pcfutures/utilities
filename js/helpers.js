@@ -99,3 +99,13 @@ export const hexToRGB = hex =>
     (hex.charAt(0) === '#' ? hex.substr(1) : hex)
         .match(/.{1,2}/g)
         .map(h => parseInt(h, 16));
+
+/**
+ * Generates an rgba css value.
+ *
+ * @param {Array} rgb The rgb values.
+ * @param {Number} alpha The alpha amount (0-1).
+ *
+ * @return {String}
+ */
+export const RGBA = (rgb, alpha) => `rgba(${rgb.join(', ')}, ${alpha})`;
