@@ -1,2 +1,3 @@
-# Gists
-You can't create gists as an organisation, so this is a just a repo for a load of files we like to use regularly.
+# Utilities
+
+A collection of utilities & helpers we use regularly.
