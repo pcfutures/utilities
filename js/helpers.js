@@ -73,9 +73,9 @@ export const editObject = (obj, mixins) => {
         (acc, k, index) =>
           index === keys.length - 1
             ? // We're at the top of our tree!
-              (acc[k] = value)
+            (acc[k] = value)
             : // We've still got a tree to climb!
-              acc[k] || (acc[k] = {}),
+            acc[k] || (acc[k] = {}),
         mixed
       );
     } else {
@@ -190,3 +190,13 @@ export const getUrlParameter = (name) => {
     ? ""
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 };
+
+
+/**
+ * Generate a url from `path`.
+ *
+ * @param {string} path The path.
+ *
+ * @return {string}
+ */
+export const url = (path) => `${window.location.origin}${path}`;
