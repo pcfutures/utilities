@@ -239,3 +239,13 @@ export const toFormData = (data) =>
 
     return acc;
   }, new FormData());
+
+/**
+* Uppercase the first character of a string.
+*
+* @param {string} str The string.
+*
+* @return {string} The uppercased string.
+*/
+export const ucFirst = (str) =>
+  `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
