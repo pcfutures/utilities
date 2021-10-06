@@ -195,18 +195,16 @@ export const getUrlParameter = (name) => {
 /**
  * Generate a url from `path`.
  *
- * @param {string} path The path.
+ * @param path The path.
  *
- * @return {string}
- */
+ *  */
 export const url = (path) => `${window.location.origin}${path}`;
 
 /**
  * Convert an object to form data.
  *
- * @param {any} data The object.
+ * @param data The object.
  *
- * @return {FormData}
  */
 export const toFormData = (data) =>
   Object.entries(data).reduce((acc, [key, value]) => {
@@ -243,9 +241,29 @@ export const toFormData = (data) =>
 /**
 * Uppercase the first character of a string.
 *
-* @param {string} str The string.
+* @param str The string.
 *
-* @return {string} The uppercased string.
+* @return The uppercased string.
 */
 export const ucFirst = (str) =>
   `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
+
+/**
+* Group an array of objects by the value of a key they all have.
+*
+* @param arr The array of objects.
+* @param getKey A callback used to get the value to group by.
+*
+*/
+export const groupBy = (
+  arr,
+  getKey,
+) =>
+  arr.reduce((acc, item) => {
+    const key = getKey(item);
+
+    return {
+      ...acc,
+      [key]: [...(acc[key] || []), item],
+    };
+  }, {});
