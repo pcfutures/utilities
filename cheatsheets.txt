@@ -1,5 +1,0 @@
-RELATIONS:
-https://hackernoon.com/eloquent-relationships-cheat-sheet-5155498c209?fbclid=IwAR3HGk88o1ikrTYzk2vmplG88j9HNyxu8k19WTNnbzdNgFnOH60FwJ2VwtA
-
-MOMENT:
-https://devhints.io/moment
