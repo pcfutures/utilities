@@ -178,6 +178,19 @@ export const camelCaseToSnakeCase = (str: string): string =>
   str.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
 
 /**
+ * Convert a snake_case string to PascalCase.
+ *
+ * @param {string} str The snake_case string.
+ *
+ * @return {string} The PascalCase string.
+ */
+export const snakeCaseToPascalCase = (str: string): string =>
+  str
+    .split('_')
+    .map((s) => s[0].toUpperCase() + s.slice(1))
+    .join('');
+
+/**
  * Is `obj1` === `obj2`?
  *
  * @param {T} obj1 The first object.
