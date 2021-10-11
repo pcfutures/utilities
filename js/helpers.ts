@@ -191,6 +191,16 @@ export const snakeCaseToPascalCase = (str: string): string =>
     .join('');
 
 /**
+ * Convert a PascalCase string to camelCase.
+ *
+ * @param {string} str The PascalCase string.
+ *
+ * @return {string} The camelCase string.
+ */
+export const pascalCaseToCamelCase = (str: string): string =>
+  str[0].toLowerCase() + str.slice(1);
+
+/**
  * Is `obj1` === `obj2`?
  *
  * @param {T} obj1 The first object.
