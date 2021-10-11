@@ -276,3 +276,14 @@ export const getUrlParameter = (key: string): string => {
       ? ''
       : decodeURIComponent(results[1].replace(/\+/g, ' '));
 };
+
+/**
+ * Formats a UK postcode.
+ * e.g. "IP44PG" => `IP4 4PG`
+ * or "SW1A1AA" => `SW1A 1AA'
+ *
+ * @param {string} postcode The postcode to format.
+ * @return {string}
+ */
+export const formatPostcode = (postcode: string) =>
+  `${postcode.slice(0, -3)} ${postcode.slice(-3)}`;
