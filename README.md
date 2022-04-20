@@ -19,3 +19,13 @@ A collection of utilities & helpers.
 - **Client-side**
 	- [React](https://reactjs.org/docs/hello-world.html)
 	- [Moment](https://momentjs.com/docs)
+
+### Useful Commands
+
+- **MySQL**
+	- _Dump a password-protected database to a raw .sql file_ - `mysqldump -u [username] -p [databasename] > [filename].sql`
+	- _Hydrate a password-protected database with a raw .sql file_ - `mysql -u [username] -p -h localhost [databasename] < [filename].sql`
+
+- **Linux Shell**
+	- _Copy a local file to a remote destination_ - `scp [path_to_local_file] [user]@[hostname]:[path_to_remote_destination]`
+	- _Copy a remote file to a local destination_ - `scp [user]@[hostname]:[path_to_remote_file] [path_to_local_destination]`
