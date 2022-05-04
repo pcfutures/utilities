@@ -29,3 +29,20 @@ A collection of utilities & helpers.
 - **Linux Shell**
 	- _Copy a local file to a remote destination_ - `scp [path_to_local_file] [user]@[hostname]:[path_to_remote_destination]`
 	- _Copy a remote file to a local destination_ - `scp [user]@[hostname]:[path_to_remote_file] [path_to_local_destination]`
+
+### Solutions
+- **MySQL 8 Access denied for user 'root'@'localhost'**
+	- sudo systemctl stop mysql
+	- sudo mkdir -p /var/run/mysqld
+	- sudo chown mysql:mysql /var/run/mysqld
+	- sudo mysqld_safe --skip-grant-tables --skip-networking &
+	- sudo mysql
+	- UPDATE mysql.user SET plugin='mysql_native_password' WHERE User='root';
+	- FLUSH PRIVILEGES;
+	- EXIT;
+	- /etc/init.d/mysql stop
+	- service mysql stop
+	- sudo killall -KILL mysql mysqld_safe mysqld
+	- /etc/init.d/mysql start
+	- service mysql start
+
